@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de gestion</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Manejo de influencers</h1>
+    <h4>Alta de influencer</h4>
+    <button onclick="location.href='Agregarinfluencer.html'">Agregar Influencer</button>
+    <h4>Datos del influencer a agregar</h4>
+    <h4>Influencer</h4>
+    <p>Nombre   </p><input type="text" id="nombre" name="nombre">
+    <p>Mail   </p><input type="email" id="mail" name="mail">
+    <p>% Comisión   </p><input type="number" id="comision" name="comision" min="0" max="100">
+    <button onclick="location.href='index.html'">Cancelar</button><button onclick="location.href='Agregarinfluencer.html'">Agregar</button>
+    <h4>Tabla de influencers</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Mail</th>
+                <th>% Comisión</th>
+                <th>total a cobrar</th>
+                <th>Etiquetas</th>
+                <th>detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos de los influencers se mostrarán aquí -->
+
+        </tbody>
+    </table>
+    <p>Informacion 🔥 Top comisión (Cobra mas $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)</p>
+    <footer>
+        <p>Obligatorio por alumnos: Santiago Coutinho (378832) - Ingacio Quiroga (385781)</p>
+    </footer>
+</body>
+</html>
