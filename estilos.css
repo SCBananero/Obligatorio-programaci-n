@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(255, 255, 255);     
+    }
+    h1 {
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+    h4 {
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+    p {
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+    input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    button {
+        margin-right: 10px;
+        background-color: rgb(19, 187, 213);
+        border-style:ridge;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid rgb(0, 0, 0);
+    }
+    th, td {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 8px;
+        text-align: left;
+    }
+    footer {
+        margin-top: 20px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
