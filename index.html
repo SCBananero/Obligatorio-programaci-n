@@ -20,7 +20,9 @@
     <table>
         <thead>
             <tr>
-                <th>Nombre</th>
+                <select name="" id="">
+                    <th><option value="nombre">Nombre</option></th>
+                </select>
                 <th>Mail</th>
                 <th>% Comisión</th>
                 <th>total a cobrar</th>
@@ -29,9 +31,8 @@
             </tr>
         </thead>
         <tbody>
-            
              <TR>
-                <Td>S</Td>
+                <Td><var name="nombre"></var></Td>
                 <Td>S</Td>
                 <Td>S</Td>
                 <Td>S</Td>
@@ -57,6 +58,55 @@
         </tbody>
     </table>
     <p>Informacion 🔥 Top comisión (Cobra mas $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)</p>
+    <h1>Manejo de artículos</h1>
+    <h4>Alta de artículos</h4>
+    <button onclick="location.href='Agregararticulo.html'">Agregar Artículo</button>
+    <h4>Datos del artículo a agregar</h4>
+    <h4>Artículo</h4>
+    <p>Código</p><input type="text" id="codigo" name="codigo">
+    <p>Descripción</p><input type="text" id="descripcion" name="descripcion">
+    <p>Precio</p><input type="number" id="precio" name="precio" min="0" step="0.01">
+    <button onclick="location.href='index.html'">Cancelar</button><button onclick="location.href='Agregararticulo.html'">Agregar</button>
+    <h1>Tabla de artículos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A001⭐</td>
+                <td>Remera de algodón</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>A002</td>
+                <td>Zapatillas deportivas</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>A003</td>
+                <td>Gorra ajustable</td>
+                <td>$500</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)</p>
+    <h1>Ventas</h1>
+    <h4>Alta de ventas</h4>
+    <button onclick="location.href='Agregarventa.html'">Agregar Venta</button>
+    <h4>Datos de la venta a agregar</h4>
+    <h4>Venta</h4>
+    <p>Nro 3 Artículo</p>
+    <select name="articulo" id="articulo">
+        <option value="Remera de algodón">A001</option>
+        <option value="Zapatillas deportivas">A002</option>
+        <option value="Gorra ajustable">A003</option>
+    </select>
+    <p></p>
     <footer>
         <p>Obligatorio por alumnos: Santiago Coutinho (378832) - Ingacio Quiroga (385781)</p>
     </footer>
