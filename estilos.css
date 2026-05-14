@@ -13,10 +13,7 @@ body {
         color: rgb(0, 0, 0);
         text-align: left;
     }
-    input {
-        display: block;
-        margin-bottom: 10px;
-    }
+   
     button {
         margin-right: 10px;
         background-color: rgb(19, 187, 213);
@@ -37,3 +34,15 @@ body {
         text-align: center;
         color: rgb(0, 0, 0);
     }
+     input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+  width: 100%;                /* El campo ocupa todo el ancho del formulario */
+  padding: 8px;               /* Grosor interno para que sea fácil escribir */
+  margin-top: 5px;            /* Separación con su respectivo Label */
+  border: 1px solid #d1d5db;  /* Borde gris claro */
+  border-radius: 5px;         /* Esquinas redondeadas del input */
+  box-sizing: border-box;     /* Evita que el padding sume ancho extra (VITAL) */
+}
+
