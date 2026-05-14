@@ -37,8 +37,7 @@ body {
      input[type="text"],
     input[type="email"],
     input[type="tel"],
-    select {
-  width: 100%;                /* El campo ocupa todo el ancho del formulario */
+    select {                /* El campo ocupa todo el ancho del formulario */
   padding: 8px;               /* Grosor interno para que sea fácil escribir */
   margin-top: 5px;            /* Separación con su respectivo Label */
   border: 1px solid #d1d5db;  /* Borde gris claro */
