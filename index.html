@@ -11,49 +11,49 @@
 
 
     <section>
-        <h3>Manejo de influencers</h3>
-        
+        <h2>Manejo de Influencers</h2>
+
         <article>
-            <h4>Alta de influencer</h4>
-            <button onclick="location.href='Agregarinfluencer.html'">Agregar Influencer</button>
+            <h3>Alta de Influencer</h3>
+            <button onclick="location.href='Agregarinfluencer.html'">Agregar influencer</button>
         </article>
 
         <article>
-            <h4>Datos del influencer a agregar</h4>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre">
-            
-            <label for="mail">Mail</label>
-            <input type="email" id="mail" name="mail">
-            
-            <label for="comision">% Comisión</label>
-            <input type="number" id="comision" name="comision" min="0" max="100">
-            
-            <button onclick="location.href='index.html'">Cancelar</button>
-            <button onclick="location.href='Agregarinfluencer.html'">Agregar</button>
+            <h3>Datos del influencer a agregar</h3>
+            <h4>Influencer</h4>
+            <div class="form-row">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="mail">Mail</label>
+                <input type="email" id="mail" name="mail">
+                <label for="comision">% Comisión</label>
+                <input type="number" id="comision" name="comision" min="0" max="100">
+                <button id="btn-cancelar-influencer" onclick="location.href='index.html'">Cancelar</button>
+                <button id="btn-agregar-influencer">Agregar</button>
+            </div>
         </article>
 
         <article>
-            <h4>Tabla de influencers</h4>
+            <h3>Tabla de influencers</h3>
             <table>
                 <thead>
                     <tr>
-                        <th><button>Nombre ⇅</button></th>
-                        <th>Email</th>
-                        <th>% Comisión</th>
-                        <th>Total a cobrar</th>
-                        <th>Etiquetas</th>
-                        <th>Detalle</th>
+                        <th><button id="btn-orden-nombre">Nombre ⇅</button></th>
+                        <th class="plain">Email</th>
+                        <th class="plain">% Comisión</th>
+                        <th class="plain">Total a cobrar</th>
+                        <th class="plain">Etiquetas</th>
+                        <th class="plain">Detalle</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody-influencers">
                     <tr>
                         <td>Ana Pérez</td>
                         <td>ana.perez@email.com</td>
                         <td>20%</td>
                         <td>$ 600</td>
                         <td>🔥🟢</td>
-                        <td><button>Ventas</button></td>
+                        <td><button class="btn-ventas">Ventas</button></td>
                     </tr>
                     <tr>
                         <td>Juan Gómez</td>
@@ -61,7 +61,7 @@
                         <td>10%</td>
                         <td>$ 30</td>
                         <td></td>
-                        <td><button>Ventas</button></td>
+                        <td><button class="btn-ventas">Ventas</button></td>
                     </tr>
                     <tr>
                         <td>Lucía Martínez</td>
@@ -69,52 +69,52 @@
                         <td>95%</td>
                         <td>$ 0</td>
                         <td>🧊</td>
-                        <td><button>Ventas</button></td>
+                        <td><button class="btn-ventas">Ventas</button></td>
                     </tr>
                 </tbody>
             </table>
-            <p>Informacion 🔥 Top comisión (Cobra mas $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)</p>
+            <p>Información: 🔥 Top comisión (cobra más $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)</p>
         </article>
     </section>
 
 
     <section>
-        <h3>Manejo de artículos</h3>
-        
+        <h2>Manejo de Artículos</h2>
+
         <article>
-            <h4>Alta de artículos</h4>
-            <button onclick="location.href='Agregararticulo.html'">Agregar Artículo</button>
+            <h3>Alta de artículo</h3>
+            <button onclick="location.href='Agregararticulo.html'">Agregar artículo</button>
         </article>
 
         <article>
-            <h4>Datos del artículo a agregar</h4>
-            <label for="codigo">Código</label>
-            <input type="text" id="codigo" name="codigo">
-            
-            <label for="descripcion">Descripción</label>
-            <input type="text" id="descripcion" name="descripcion">
-            
-            <label for="precio">Precio</label>
-            <input type="number" id="precio" name="precio" min="0" step="0.01">
-            
-            <button onclick="location.href='index.html'">Cancelar</button>
-            <button onclick="location.href='Agregararticulo.html'">Agregar</button>
+            <h3>Datos del artículo a agregar</h3>
+            <h4>Artículo</h4>
+            <div class="form-row">
+                <label for="codigo">Código</label>
+                <input type="text" id="codigo" name="codigo">
+                <label for="descripcion">Descripción</label>
+                <input type="text" id="descripcion" name="descripcion">
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" name="precio" min="0" step="0.01">
+                <button id="btn-cancelar-articulo" onclick="location.href='index.html'">Cancelar</button>
+                <button id="btn-agregar-articulo">Agregar</button>
+            </div>
         </article>
 
         <article>
-            <h4>Tabla de artículos</h4>
+            <h3>Tabla de artículos</h3>
             <table>
                 <thead>
                     <tr>
-                        <th><button>Código ⇅</button></th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
+                        <th><button id="btn-orden-codigo">Código ⇅</button></th>
+                        <th class="plain">Descripción</th>
+                        <th class="plain">Precio</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody-articulos">
                     <tr>
                         <td>A001⭐</td>
-                        <td>Remera de algodón</td>
+                        <td>Remera algodón básica</td>
                         <td>$1000</td>
                     </tr>
                     <tr>
@@ -133,74 +133,74 @@
         </article>
     </section>
 
-    
+
     <section>
-        <h3>Ventas</h3>
-        
+        <h2>Ventas</h2>
+
         <article>
-            <h4>Alta de ventas</h4>
-            <button onclick="location.href='Agregarventa.html'">Agregar Venta</button>
+            <h3>Alta de venta</h3>
+            <button onclick="location.href='Agregarventa.html'">Agregar venta</button>
         </article>
 
         <article>
-            <h4>Datos de la venta a agregar</h4>
-            <label for="articulo">Artículo</label>
-            <select id="articulo">
-                <option value="A001">Remera de algodón</option>
-                <option value="A002">Zapatillas deportivas</option>
-                <option value="A003">Gorra ajustable</option>
-            </select>
-            
-            <label for="influencer">Influencer</label>
-            <select id="influencer">
-                <option>Ana Pérez</option>
-                <option>Juan Gómez</option>
-                <option>Lucía Martínez</option>
-            </select>
-            
-            <label for="cantidad">Cantidad</label>
-            <input type="number" id="cantidad" min="1">
-            
-            <label for="medio">Medio</label>
-            <select id="medio">
-                <option>Instagram</option>
-                <option>Facebook</option>
-                <option>Twitter</option>
-            </select>
-            
-            <button onclick="location.href='index.html'">Cancelar</button>
-            <button onclick="location.href='Agregarventa.html'">Agregar</button>
+            <h3>Datos de la venta a agregar</h3>
+            <h4>Venta</h4>
+            <div class="form-row">
+                <label class="venta-nro" id="nro-venta">Nro: 3 </label>
+                <label for="articulo">Artículo</label>
+                <select id="articulo">
+                    <option value="A001">A001</option>
+                    <option value="A002">A002</option>
+                    <option value="A003">A003</option>
+                </select>
+                <label for="influencer">Influencer</label>
+                <select id="influencer">
+                    <option>Ana Pérez</option>
+                    <option>Juan Gómez</option>
+                    <option>Lucía Martínez</option>
+                </select>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" min="1">
+                <label for="medio">Medio</label>
+                <select id="medio">
+                    <option value="1">1-Instagram</option>
+                    <option value="2">2-YouTube</option>
+                    <option value="3">3-Facebook</option>
+                </select>
+                <button id="btn-cancelar-venta" onclick="location.href='index.html'">Cancelar</button>
+                <button id="btn-agregar-venta">Agregar</button>
+            </div>
         </article>
 
         <article>
-            <h4>Tabla de ventas (ordenado por número de ventas)</h4>
+            <h3>Tabla de ventas (ordenada por número de venta)</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>Nro Venta</th>
-                        <th>Código de Artículo</th>
-                        <th>Nombre de influencer</th>
-                        <th>Cantidad</th>
-                        <th>Medio</th>
-                        <th>Acción</th>
+                        <th class="plain">Nro Venta</th>
+                        <th class="plain">Código de Artículo</th>
+                        <th class="plain">Nombre de influencer</th>
+                        <th class="plain">Cantidad</th>
+                        <th class="plain">Medio</th>
+                        <th class="plain">Acción</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody-ventas">
                     <tr>
                         <td>1</td>
                         <td>A001</td>
                         <td>Ana Pérez</td>
                         <td>3</td>
-                        <td>Instagram</td>
-                        <td><button>❌</button></td>
+                        <td>1-Instagram</td>
+                        <td><button class="btn-eliminar">❌</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>A002</td>
                         <td>Juan Gómez</td>
                         <td>1</td>
-                        <td>YouTube</td>
-                        <td><button>❌</button></td>
+                        <td>2-YouTube</td>
+                        <td><button class="btn-eliminar">❌</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -208,12 +208,15 @@
 
         <article>
             <h4>Gráfico de burbujas</h4>
-            <p>(Aquí irá el gráfico en el 2do obligatorio)</p>
+            <div id="grafico-burbujas"></div>
         </article>
     </section>
 
+
     <footer>
-        Obligatorio por alumnos: Santiago Coutinho (378832) - Ignacio Quiroga (385781)
+        Sitio para el Obligatorio de Programación 1 desarrollado por
+        <a href="https://www.instagram.com/santiago_coutinho._?igsh=MmViaDZ6ZnJkMHkx">Santiago Coutinho (378832)</a> y
+        <a href="https://www.instagram.com/quiirogaaa?igsh=MW83Y3pnbHRhYzdvaA==">Ignacio Quiroga (385781)</a>
     </footer>
 </body>
 </html>
