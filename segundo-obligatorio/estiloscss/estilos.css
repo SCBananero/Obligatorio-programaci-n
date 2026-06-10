@@ -1,0 +1,261 @@
+/* Santiago Coutinho (378832) y Ignacio Quiroga (385781) */
+
+body {
+    background-color: #707070;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #111;
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    margin: 2% 4% 2.5% 0.5%;
+}
+
+article {
+    background-color: #eaeaeaa2;
+    border-radius: 10px;
+    padding: 22px 20px;
+    margin-bottom: 30px;
+    margin-right: 13.5%;
+    margin-left: 3%;
+}
+
+dialog {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 22px 25px;
+    border: solid 3px #000000;
+    max-width: 95vw;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+h2 {
+    margin-left: 4%;
+    color: #111;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    color: #111;
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+h4 {
+    color: #111;
+    margin: 15px 0 10px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+button {
+    background-color: #13bbd5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 17px 50px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn-agregar-1 {
+    background-color: #13bbd5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 17px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0fa8bf;
+}
+
+label {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 2px 3px;
+    margin-left: 40px;
+    border: 1.5px solid #000000;
+    font-size: 13px;
+    width: 150px;
+    max-width: 200px;
+}
+
+input[type="email"] {
+    padding: 2px 3px;
+    margin-left: 65px;
+    border: 1.5px solid #000000;
+    font-size: 13px;
+    width: 150px;
+    max-width: 200px;
+}
+
+input[type="number"] {
+    padding: 2px 3px;
+    margin-left: 22px;
+    border: 1.5px solid #000000;
+    font-size: 13px;
+    width: 150px;
+    max-width: 200px;
+}
+
+select {
+    padding: 2px 3px;
+    margin-left: 34px;
+    border: 1.5px solid #000000;
+    font-size: 13px;
+    width: auto;
+    max-width: 200px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 8px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1.5px solid #000;
+    text-align: left;
+}
+
+th {
+    color: #111;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+
+td {
+    font-size: 15px;
+    padding: 8px 12px;
+}
+
+th button {
+    border: none;
+    padding: 15px 45px;
+    font-size: 15px;
+    margin: 3px;
+}
+
+th button:hover {
+    background-color: #0fa8bf;
+}
+
+th.plain {
+    padding: 8px 10px;
+}
+
+td button {
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin: 0;
+    font-size: 15px;
+}
+
+footer {
+    text-align: left;
+    margin-top: 20px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+footer a {
+    color: #aad4f5;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+
+.venta-nro {
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 55px;
+}
+
+.btn-ventas {
+    background-color: #13bbd5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8em 1.5em;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn-eliminar {
+    border: none;
+    border-radius: 10px;
+    padding: 0.8em 1.5em;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+#grafico-burbujas {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 28px;
+    padding: 16px 0;
+    flex-wrap: wrap;
+}
+
+.burbuja-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.burbuja {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.burbuja-label {
+    font-size: 13px;
+    text-align: center;
+}

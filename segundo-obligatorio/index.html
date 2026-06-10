@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- Santiago Coutinho (378832) y Ignacio Quiroga (385781) -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de gestión</title>
+    <link rel="stylesheet" href="estiloscss/estilos.css">
+</head>
+<body>
+    <h1>Sistema de Gestión - Coutinho Quiroga</h1>
+
+    <!-- ===== INFLUENCERS ===== -->
+    <section>
+        <h2>Manejo de Influencers</h2>
+
+        <article>
+            <h3>Alta de Influencer</h3>
+            <button class="btn-agregar-1" onclick="mostrarForm('form-influencer')">Agregar influencer</button>
+        </article>
+
+        <dialog id="form-influencer">
+            <h3>Datos del influencer a agregar</h3>
+            <h4>Influencer</h4>
+            <div class="form-row">
+                <label for="inf-nombre">Nombre</label>
+                <input type="text" id="inf-nombre">
+                <label for="inf-mail">Mail</label>
+                <input type="email" id="inf-mail">
+                <label for="inf-comision">% Comisión</label>
+                <input type="number" id="inf-comision" min="0" max="100">
+                <button onclick="cancelarInfluencer()">Cancelar</button>
+                <button onclick="agregarInfluencer()">Agregar</button>
+            </div>
+        </dialog>
+
+        <article>
+            <h3>Tabla de influencers</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th><button onclick="ordenarInfluencers()">Nombre &#8645;</button></th>
+                        <th class="plain">Email</th>
+                        <th class="plain">% Comisión</th>
+                        <th class="plain">Total a cobrar</th>
+                        <th class="plain">Etiquetas</th>
+                        <th class="plain">Detalle</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-influencers"></tbody>
+            </table>
+            <p>Información: 🔥 Top comisión (cobra más $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)</p>
+        </article>
+    </section>
+
+    <!-- ===== ARTICULOS ===== -->
+    <section>
+        <h2>Manejo de Artículos</h2>
+
+        <article>
+            <h3>Alta de artículo</h3>
+            <button class="btn-agregar-1" onclick="mostrarForm('form-articulo')">Agregar artículo</button>
+        </article>
+
+        <dialog id="form-articulo">
+            <h3>Datos del artículo a agregar</h3>
+            <h4>Artículo</h4>
+            <div class="form-row">
+                <label for="art-codigo">Código</label>
+                <input type="text" id="art-codigo">
+                <label for="art-descripcion">Descripción</label>
+                <input type="text" id="art-descripcion">
+                <label for="art-precio">Precio</label>
+                <input type="number" id="art-precio" min="0" step="0.01">
+                <button onclick="cancelarArticulo()">Cancelar</button>
+                <button onclick="agregarArticulo()">Agregar</button>
+            </div>
+        </dialog>
+
+        <article>
+            <h3>Tabla de artículos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th><button onclick="ordenarArticulos()">Código &#8645;</button></th>
+                        <th class="plain">Descripción</th>
+                        <th class="plain">Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-articulos"></tbody>
+            </table>
+            <p>Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)</p>
+        </article>
+    </section>
+
+    <!-- ===== VENTAS ===== -->
+    <section>
+        <h2>Ventas</h2>
+
+        <article>
+            <h3>Alta de venta</h3>
+            <button class="btn-agregar-1" onclick="mostrarForm('form-venta')">Agregar venta</button>
+        </article>
+
+        <dialog id="form-venta">
+            <h3>Datos de la venta a agregar</h3>
+            <h4>Venta</h4>
+            <div class="form-row">
+                <label class="venta-nro" id="nro-venta">Nro: 1</label>
+                <label for="sel-articulo">Artículo</label>
+                <select id="sel-articulo"></select>
+                <label for="sel-influencer">Influencer</label>
+                <select id="sel-influencer"></select>
+                <label for="ven-cantidad">Cantidad</label>
+                <input type="number" id="ven-cantidad" min="1">
+                <label for="sel-medio">Medio</label>
+                <select id="sel-medio">
+                    <option value="1-Instagram">1-Instagram</option>
+                    <option value="2-YouTube">2-YouTube</option>
+                    <option value="3-X">3-X</option>
+                    <option value="4-TikTok">4-TikTok</option>
+                    <option value="5-Facebook">5-Facebook</option>
+                    <option value="6-Otras">6-Otras</option>
+                </select>
+                <button onclick="cancelarVenta()">Cancelar</button>
+                <button onclick="agregarVenta()">Agregar</button>
+            </div>
+        </dialog>
+
+        <article>
+            <h3>Tabla de ventas (ordenada por número de venta)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="plain">Nro Venta</th>
+                        <th class="plain">Código de Artículo</th>
+                        <th class="plain">Nombre de influencer</th>
+                        <th class="plain">Cantidad</th>
+                        <th class="plain">Medio</th>
+                        <th class="plain">Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-ventas"></tbody>
+            </table>
+        </article>
+
+        <article>
+            <h4>Gráfico de burbujas</h4>
+            <div id="grafico-burbujas"></div>
+        </article>
+    </section>
+
+    <footer>
+        Sitio para el Obligatorio de Programación 1 desarrollado por
+        <a href="https://www.instagram.com/santiago_coutinho._" target="_blank" rel="noopener noreferrer">Santiago Coutinho (378832)</a> y
+        <a href="https://www.instagram.com/quiirogaaa" target="_blank" rel="noopener noreferrer">Ignacio Quiroga (385781)</a>
+    </footer>
+
+    <script src="carpetajs/javascript.js"></script>
+</body>
+</html>
