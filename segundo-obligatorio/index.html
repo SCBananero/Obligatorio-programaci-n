@@ -12,22 +12,22 @@
 
     <!-- ===== INFLUENCERS ===== -->
     <section>
-        <h2>Manejo de Influencers</h2>
+        <h3>Manejo de Influencers</h3>
 
         <article>
-            <h3>Alta de Influencer</h3>
-            <button class="btn-agregar-1" onclick="mostrarForm('form-influencer')">Agregar influencer</button>
+            <h4>Alta de Influencer</h4>
+            <button onclick="mostrarForm('form-influencer')">Agregar influencer</button>
         </article>
 
         <dialog id="form-influencer">
-            <h3>Datos del influencer a agregar</h3>
-            <h4>Influencer</h4>
+            <h4>Datos del influencer a agregar</h4>
+            <div class="form-subtitle">Influencer</div>
             <div class="form-row">
                 <label for="inf-nombre">Nombre</label>
                 <input type="text" id="inf-nombre">
                 <label for="inf-mail">Mail</label>
                 <input type="email" id="inf-mail">
-                <label for="inf-comision">% Comisión</label>
+                <label for="inf-comision">% Comision</label>
                 <input type="number" id="inf-comision" min="0" max="100">
                 <button onclick="cancelarInfluencer()">Cancelar</button>
                 <button onclick="agregarInfluencer()">Agregar</button>
@@ -35,13 +35,13 @@
         </dialog>
 
         <article>
-            <h3>Tabla de influencers</h3>
+            <h4>Tabla de influencers</h4>
             <table>
                 <thead>
                     <tr>
                         <th><button onclick="ordenarInfluencers()">Nombre &#8645;</button></th>
                         <th class="plain">Email</th>
-                        <th class="plain">% Comisión</th>
+                        <th class="plain">% Comision</th>
                         <th class="plain">Total a cobrar</th>
                         <th class="plain">Etiquetas</th>
                         <th class="plain">Detalle</th>
@@ -49,26 +49,26 @@
                 </thead>
                 <tbody id="tbody-influencers"></tbody>
             </table>
-            <p>Información: 🔥 Top comisión (cobra más $) 🧊 Cero ventas 🟢 Venta más cara (mayor monto en una sola venta)</p>
+            <p>Informacion: &#128293; Top comision (cobra mas $) 🧊; Cero ventas &#128994; Venta mas cara (mayor monto en una sola venta)</p>
         </article>
     </section>
 
     <!-- ===== ARTICULOS ===== -->
     <section>
-        <h2>Manejo de Artículos</h2>
+        <h3>Manejo de Articulos</h3>
 
         <article>
-            <h3>Alta de artículo</h3>
-            <button class="btn-agregar-1" onclick="mostrarForm('form-articulo')">Agregar artículo</button>
+            <h4>Alta de articulo</h4>
+            <button onclick="mostrarForm('form-articulo')">Agregar articulo</button>
         </article>
 
         <dialog id="form-articulo">
-            <h3>Datos del artículo a agregar</h3>
-            <h4>Artículo</h4>
+            <h4>Datos del articulo a agregar</h4>
+            <div class="form-subtitle">Articulo</div>
             <div class="form-row">
-                <label for="art-codigo">Código</label>
+                <label for="art-codigo">Codigo</label>
                 <input type="text" id="art-codigo">
-                <label for="art-descripcion">Descripción</label>
+                <label for="art-descripcion">Descripcion</label>
                 <input type="text" id="art-descripcion">
                 <label for="art-precio">Precio</label>
                 <input type="number" id="art-precio" min="0" step="0.01">
@@ -78,33 +78,33 @@
         </dialog>
 
         <article>
-            <h3>Tabla de artículos</h3>
+            <h4>Tabla de articulos</h4>
             <table>
                 <thead>
                     <tr>
-                        <th><button onclick="ordenarArticulos()">Código &#8645;</button></th>
-                        <th class="plain">Descripción</th>
+                        <th><button onclick="ordenarArticulos()">Codigo &#8645;</button></th>
+                        <th class="plain">Descripcion</th>
                         <th class="plain">Precio</th>
                     </tr>
                 </thead>
                 <tbody id="tbody-articulos"></tbody>
             </table>
-            <p>Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)</p>
+            <p>Informacion: &#11088; Articulo mas vendido (mayor cantidad de unidades vendidas)</p>
         </article>
     </section>
 
     <!-- ===== VENTAS ===== -->
     <section>
-        <h2>Ventas</h2>
+        <h3>Ventas</h3>
 
         <article>
-            <h3>Alta de venta</h3>
-            <button class="btn-agregar-1" onclick="mostrarForm('form-venta')">Agregar venta</button>
+            <h4>Alta de venta</h4>
+            <button onclick="mostrarForm('form-venta')">Agregar venta</button>
         </article>
 
         <dialog id="form-venta">
-            <h3>Datos de la venta a agregar</h3>
-            <h4>Venta</h4>
+            <h4>Datos de la venta a agregar</h4>
+            <div class="form-subtitle">Venta</div>
             <div class="form-row">
                 <label class="venta-nro" id="nro-venta">Nro: 1</label>
                 <label for="sel-articulo">Artículo</label>
@@ -128,7 +128,7 @@
         </dialog>
 
         <article>
-            <h3>Tabla de ventas (ordenada por número de venta)</h3>
+            <h4>Tabla de ventas (ordenada por numero de venta)</h4>
             <table>
                 <thead>
                     <tr>
@@ -151,11 +151,12 @@
     </section>
 
     <footer>
-        Sitio para el Obligatorio de Programación 1 desarrollado por
-        <a href="https://www.instagram.com/santiago_coutinho._" target="_blank" rel="noopener noreferrer">Santiago Coutinho (378832)</a> y
-        <a href="https://www.instagram.com/quiirogaaa" target="_blank" rel="noopener noreferrer">Ignacio Quiroga (385781)</a>
+        Sitio para el Obligatorio de Programacion 1 desarrollado por
+        <a href="https://www.instagram.com/santiago_coutinho._">Santiago Coutinho (378832)</a> y
+        <a href="https://www.instagram.com/quiirogaaa">Ignacio Quiroga (385781)</a>
     </footer>
 
-    <script src="carpetajs/javascript.js"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/funciones.js"></script>
 </body>
 </html>

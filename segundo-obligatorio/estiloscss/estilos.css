@@ -21,7 +21,7 @@ section {
     padding: 25px 30px;
     padding-bottom: 0;
     margin-bottom: 30px;
-    margin: 2% 4% 2.5% 0.5%;
+    margin: 2% 4% 2% 1%;
 }
 
 article {
@@ -30,63 +30,51 @@ article {
     padding: 22px 20px;
     margin-bottom: 30px;
     margin-right: 13.5%;
-    margin-left: 3%;
+    margin-left: 1%;
 }
-
 dialog {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 22px 25px;
     border: solid 3px #000000;
-    max-width: 95vw;
 }
 
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.45);
-}
-
-h2 {
-    margin-left: 4%;
-    color: #111;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    font-weight: bold;
+    background-color: black;
+    opacity: 0.1;
 }
 
 h3 {
     color: #111;
-    margin: 0 0 10px 0;
-    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.35em;
     font-weight: bold;
 }
 
 h4 {
     color: #111;
-    margin: 15px 0 10px 0;
-    font-size: 1.1em;
+    margin: 0 0 10px 0;
+    font-size: 1em;
     font-weight: bold;
 }
 
+/* Subtítulo dentro del formulario (ej: "Influencer", "Venta") */
+.form-subtitle {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 12px;
+}
+
+/* Botones generales */
 button {
     background-color: #13bbd5;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 17px 50px;
+    border-radius: 8px;
+    padding: 12px 28px;
     cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.2s;
-}
-
-.btn-agregar-1 {
-    background-color: #13bbd5;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 17px 20px;
-    cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     transition: background-color 0.2s;
 }
 
@@ -94,58 +82,38 @@ button:hover {
     background-color: #0fa8bf;
 }
 
+/* Inputs y selects */
 label {
     display: inline-block;
     margin-right: 4px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
-input[type="text"] {
-    padding: 2px 3px;
-    margin-left: 40px;
-    border: 1.5px solid #000000;
-    font-size: 13px;
-    width: 150px;
-    max-width: 200px;
-}
-
-input[type="email"] {
-    padding: 2px 3px;
-    margin-left: 65px;
-    border: 1.5px solid #000000;
-    font-size: 13px;
-    width: 150px;
-    max-width: 200px;
-}
-
-input[type="number"] {
-    padding: 2px 3px;
-    margin-left: 22px;
-    border: 1.5px solid #000000;
-    font-size: 13px;
-    width: 150px;
-    max-width: 200px;
-}
-
+input[type="text"],
+input[type="email"],
+input[type="number"],
 select {
-    padding: 2px 3px;
-    margin-left: 34px;
-    border: 1.5px solid #000000;
+    padding: 7px 10px;
+    margin: 0 14px 0 0;
+    border: 1.5px solid #aaa;
+    border-radius: 5px;
     font-size: 13px;
-    width: auto;
-    max-width: 200px;
+    width: 160px;
 }
 
+/* Fila de campos del formulario - todo en una sola línea */
 .form-row {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0 8px;
 }
 
+/* ── TABLAS ── */
 table {
     border-collapse: collapse;
     margin-top: 10px;
+    background: #fff;
 }
 
 th, td {
@@ -154,42 +122,55 @@ th, td {
 }
 
 th {
+    background-color: #eceff4;
     color: #111;
     font-weight: bold;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 0;
 }
 
 td {
-    font-size: 15px;
+    background-color: #fff;
+    font-size: 13px;
     padding: 8px 12px;
 }
 
+/* Botones dentro de th: normales pero sin margen */
 th button {
+    background-color: #13bbd5;
+    color: #fff;
     border: none;
-    padding: 15px 45px;
-    font-size: 15px;
-    margin: 3px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
 }
 
 th button:hover {
     background-color: #0fa8bf;
 }
 
+/* th sin botón: padding normal */
 th.plain {
-    padding: 8px 10px;
+    padding: 10px 16px;
 }
 
+/* Botones dentro de td: normales pero sin margen */
 td button {
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 8px 16px;
     margin: 0;
-    font-size: 15px;
+    font-size: 13px;
 }
 
+/* Footer */
 footer {
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
+    padding: 20px;
     color: #ddd;
     font-size: 14px;
 }
@@ -199,63 +180,13 @@ footer a {
 }
 
 p {
-    font-size: 16px;
+    font-size: 13px;
     margin: 10px 0 0 0;
 }
 
+/* Nro de venta en formulario */
 .venta-nro {
     font-weight: bold;
-    font-size: 15px;
-    margin-right: 55px;
-}
-
-.btn-ventas {
-    background-color: #13bbd5;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 0.8em 1.5em;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.2s;
-}
-
-.btn-eliminar {
-    border: none;
-    border-radius: 10px;
-    padding: 0.8em 1.5em;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.2s;
-}
-
-#grafico-burbujas {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    gap: 28px;
-    padding: 16px 0;
-    flex-wrap: wrap;
-}
-
-.burbuja-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.burbuja {
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-.burbuja-label {
-    font-size: 13px;
-    text-align: center;
+    font-size: 14px;
+    margin-right: 20px;
 }
