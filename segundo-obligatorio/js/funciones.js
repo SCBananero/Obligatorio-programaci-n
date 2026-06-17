@@ -60,7 +60,11 @@ function renderArticulos() {
         let art = sistema.articulos[i];
         let tr = document.createElement("tr");
         let tdCod = document.createElement("td");
-        tdCod.textContent = art.codigo + (art.codigo === masVendido ? "⭐" : "");
+        let textoCodigo = art.codigo;
+        if (art.codigo === masVendido) {
+            textoCodigo = art.codigo + "⭐";
+        }
+        tdCod.textContent = textoCodigo;
         let tdDesc = document.createElement("td"); tdDesc.textContent = art.descripcion;
         let tdPre = document.createElement("td"); tdPre.textContent = "$" + art.precio;
 
@@ -116,9 +120,10 @@ function renderGrafico() {
     let minDiametro = maxDiametro * 0.2;
 
     for (let k = 0; k < sistema.MEDIOS.length; k++) {
-        let size = (maxVal > 0)
-            ? minDiametro + (maxDiametro - minDiametro) * (totales[k] / maxVal)
-            : minDiametro;
+        let size = minDiametro;
+        if (maxVal > 0) {
+            size = minDiametro + (maxDiametro - minDiametro) * (totales[k] / maxVal);
+        }
 
         let col = document.createElement("div");
         col.className = "burbuja-col";
@@ -182,7 +187,7 @@ function agregarInfluencer() {
     let comisionStr = document.getElementById("inf-comision").value.trim();
     let comision = parseFloat(comisionStr);
 
-    if (nombre === "" || mail === "" || comisionStr === "" || isNaN(comision) || comision < 0 || comision > 100) {
+    if (nombre === "" || mail === "" || comisionStr === "" || isNaN(comision)) {
         alert("Ingrese todos los datos del influencer.");
         return;
     }
@@ -293,9 +298,49 @@ function cancelarVenta() {
 }
 
 function eliminarVenta(nro) {
-    if (!confirm("¿Confirma que desea eliminar la venta Nro " + nro + "?")) return;
+    let confirmar = confirm("¿Confirma que desea eliminar la venta Nro " + nro + "?");
+    if (!confirmar) {
+        return;
+    }
     sistema.eliminarVenta(nro);
     renderAll();
 }
 
+function inicializarEventos() {
+    document.getElementById("btn-agregar-influencer").addEventListener("click", function() {
+        mostrarForm("form-influencer");
+    });
+
+    document.getElementById("btn-agregar-articulo").addEventListener("click", function() {
+        mostrarForm("form-articulo");
+    });
+
+    document.getElementById("btn-agregar-venta").addEventListener("click", function() {
+        mostrarForm("form-venta");
+    });
+
+    document.getElementById("btn-cancelar-influencer").addEventListener("click", cancelarInfluencer);
+    document.getElementById("btn-cancelar-articulo").addEventListener("click", cancelarArticulo);
+    document.getElementById("btn-cancelar-venta").addEventListener("click", cancelarVenta);
+
+    document.getElementById("btn-orden-influencers").addEventListener("click", ordenarInfluencers);
+    document.getElementById("btn-orden-articulos").addEventListener("click", ordenarArticulos);
+
+    document.getElementById("influencer-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        agregarInfluencer();
+    });
+
+    document.getElementById("articulo-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        agregarArticulo();
+    });
+
+    document.getElementById("venta-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        agregarVenta();
+    });
+}
+
+inicializarEventos();
 renderAll();

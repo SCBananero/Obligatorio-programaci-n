@@ -163,16 +163,38 @@ class Sistema {
 
     ordenarInfluencers() {
         this.influencers.sort(function(a, b) {
-            if (this.ordenNombreAsc) return a.nombre < b.nombre ? -1 : 1;
-            else return a.nombre > b.nombre ? -1 : 1;
+            if (this.ordenNombreAsc) {
+                if (a.nombre < b.nombre) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else {
+                if (a.nombre > b.nombre) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }
         }.bind(this));
         this.ordenNombreAsc = !this.ordenNombreAsc;
     }
 
     ordenarArticulos() {
         this.articulos.sort(function(a, b) {
-            if (this.ordenCodigoAsc) return a.codigo < b.codigo ? -1 : 1;
-            else return a.codigo > b.codigo ? -1 : 1;
+            if (this.ordenCodigoAsc) {
+                if (a.codigo < b.codigo) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else {
+                if (a.codigo > b.codigo) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }
         }.bind(this));
         this.ordenCodigoAsc = !this.ordenCodigoAsc;
     }
