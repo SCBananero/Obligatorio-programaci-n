@@ -184,10 +184,9 @@ function renderAll() {
 function agregarInfluencer() {
     let nombre = document.getElementById("inf-nombre").value.trim();
     let mail = document.getElementById("inf-mail").value.trim();
-    let comisionStr = document.getElementById("inf-comision").value.trim();
-    let comision = parseFloat(comisionStr);
+    let comision = parseFloat(document.getElementById("inf-comision").value);
 
-    if (nombre === "" || mail === "" || comisionStr === "" || isNaN(comision)) {
+    if (nombre === "" || mail === "" || isNaN(comision)) {
         alert("Ingrese todos los datos del influencer.");
         return;
     }
@@ -239,19 +238,14 @@ function mostrarVentas(nombre) {
 function agregarArticulo() {
     let codigo = document.getElementById("art-codigo").value.trim();
     let descripcion = document.getElementById("art-descripcion").value.trim();
-    let precioStr = document.getElementById("art-precio").value.trim();
-    let precio = parseFloat(precioStr);
+    let precio = parseFloat(document.getElementById("art-precio").value);
 
-    if (codigo === "" || descripcion === "" || precioStr === "" || isNaN(precio) || precio < 0) {
+    if (codigo === "" || descripcion === "" || isNaN(precio)) {
         alert("Ingrese todos los datos del artículo.");
         return;
     }
     if (sistema.existeCodigo(codigo)) {
         alert("Ya existe un artículo con ese código.");
-        return;
-    }
-    if (sistema.existeDescripcionYPrecio(descripcion, precio)) {
-        alert("Ya existe un artículo con esa descripción y precio.");
         return;
     }
 
@@ -278,11 +272,10 @@ function ordenarArticulos() {
 function agregarVenta() {
     let codigo = document.getElementById("sel-articulo").value;
     let inf = document.getElementById("sel-influencer").value;
-    let cantidadStr = document.getElementById("ven-cantidad").value.trim();
-    let cantidad = parseInt(cantidadStr);
+    let cantidad = parseInt(document.getElementById("ven-cantidad").value);
     let medio = document.getElementById("sel-medio").value;
 
-    if (codigo === "" || inf === "" || medio === "" || cantidadStr === "" || isNaN(cantidad) || cantidad < 1) {
+    if (isNaN(cantidad) || cantidad < 1) {
         alert("Ingrese todos los datos de la venta.");
         return;
     }

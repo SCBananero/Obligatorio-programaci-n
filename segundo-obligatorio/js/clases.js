@@ -28,24 +28,11 @@ class Venta {
 
 class Sistema {
     constructor() {
-        this.influencers = [
-            new Influencer("Ana Perez", "ana.perez@email.com", 20),
-            new Influencer("Juan Gomez", "juan.gomez@email.com", 10),
-            new Influencer("Lucia Martinez", "lucia.martinez@email.com", 95)
-        ];
+        this.influencers = [];
+        this.articulos = [];
+        this.ventas = [];
 
-        this.articulos = [
-            new Articulo("A001", "Remera algodon basica", 1000),
-            new Articulo("A002", "Zapatillas deportivas", 300),
-            new Articulo("A003", "Gorra ajustable", 500)
-        ];
-
-        this.ventas = [
-            new Venta(1, "A001", "Ana Perez", 3, "1-Instagram"),
-            new Venta(2, "A002", "Juan Gomez", 1, "2-YouTube")
-        ];
-
-        this.contadorVentas = 3;
+        this.contadorVentas = 1;
         this.ordenNombreAsc = true;
         this.ordenCodigoAsc = true;
 
@@ -70,15 +57,6 @@ class Sistema {
     existeCodigo(codigo) {
         for (let i = 0; i < this.articulos.length; i++) {
             if (this.articulos[i].codigo === codigo) return true;
-        }
-        return false;
-    }
-
-    existeDescripcionYPrecio(descripcion, precio) {
-        for (let i = 0; i < this.articulos.length; i++) {
-            if (this.articulos[i].descripcion === descripcion && this.articulos[i].precio === precio) {
-                return true;
-            }
         }
         return false;
     }
